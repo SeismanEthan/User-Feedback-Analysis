@@ -1,0 +1,24 @@
+{
+  "api": {
+    "spark": {
+      "api_key": "uNhkDKnECPgfrjjwyoYs:SMOjXMGeIwrZfTDtfoEj",
+      "api_url": "https://spark-api-open.xf-yun.com/v2/chat/completions",
+      "model": "x1",
+      "max_tokens": 15,
+      "temperature": 0.1,
+      "top_k": 1,
+      "system_prompt": "作为学习App用户反馈分类员，任务是用户反馈，将其准确归类至以下标签中的一个如果包含多个就要选择多个回复。请注意，将仅返回与用户反馈内容匹配的标签，思考内容不要展示，不做任何额外回复。标签包含：\n【学伴】涉及成长陪伴、元气值、升级石等相关反馈\n【卡顿】针对使用过程中出现卡顿、延迟等体验问题\n【抽卡】涵盖SSR、SR、卡包等游戏化激励模块的反馈\n【VIP】任何与充值、会员服务相关的意见或问题\n【奖学金】与学习奖励获取、兑换资格等相关的内容\n【排行榜】包括学力值日榜、省份月榜等排名相关反馈\n【兑换商店】涉及奖学金兑换、周边商品、发货延迟等事务\n【我的】中心功能、个人信息管理等相关反馈\n【欧粉说】社区发帖、互动、内容相关的建议或问题\n【签到】每周打卡功能、奖励领取异常等反馈\n【教材】一些新科目的缺少，现已有教材的版本问题\n"
+    }
+  },
+  "rules": [
+    {"keywords": ["学伴", "元气", "伴学", "陪学"], "label": "学伴"},
+    {"keywords": ["奖学金"], "label": "奖学金"},
+    {"keywords": ["粉说"], "label": "欧粉说"},
+    {"keywords": ["排行榜", "学力值"], "label": "排行榜"},
+    {"keywords": ["充值", "vip", "VIP"], "label": "vip"},
+    {"keywords": ["抽卡", "SSR", "SR", "sr", "ssr"], "label": "抽卡"},
+    {"keywords": ["很卡", "太卡", "卡顿", "卡卡卡"], "label": "卡顿"},
+    {"keywords": ["兑换"], "label": "兑换商店"},
+    {"keywords": ["签到", "打卡"], "label": "签到"}
+  ]
+}
